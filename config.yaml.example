@@ -1,0 +1,26 @@
+# 求职系统配置文件模板
+# 复制此文件为 config.yaml 并填写你的实际配置
+
+# LLM配置
+llm:
+  provider: "openai"  # openai, claude, custom
+  api_key: ""  # 从环境变量 LLM_API_KEY 读取，或在此填写
+  model: "gpt-4"
+  base_url: ""  # 如果是自定义API需要填写
+
+# 路径配置
+paths:
+  resume_pdf: "个人信息/resume.pdf"
+  resume_base: "个人信息/resume_base.md"
+  resume_versions: "个人信息/resume_versions/"
+  projects: "个人信息/projects.md"
+  jd_folder: "目标岗位/"
+  applications_db: "投递信息管理/applications.xlsx"  # 使用Excel格式
+  suggestions_folder: "岗位投递/suggestions/"
+  interview_materials: "面试准备/materials/"
+
+# JD命名规则
+jd:
+  naming_pattern: "JD{id:03d}_{company}_{position}"  # JD001_百度_算法工程师
+  auto_increment: true  # 是否自动分配ID
+
